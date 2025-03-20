@@ -3862,7 +3862,7 @@ export const ordertest = async (req, res) => {
           {
             headers: {
               "X-Shopify-Access-Token":
-                "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",
+                shopify_token,
             },
           }
         );
@@ -4458,7 +4458,7 @@ export const ordertest = async (req, res) => {
 //       maxBodyLength: Infinity,
 //       url: `https://lakmestaging.myshopify.com/admin/api/2024-10/orders/${orderId}.json`,
 //       headers: {
-//         "X-Shopify-Access-Token": "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",
+//         "X-Shopify-Access-Token": shopify_token,
 //         "Content-Type": "application/json",
 //       },
 //       data: JSON.stringify({
@@ -4510,7 +4510,7 @@ export const ordertest = async (req, res) => {
 //     const axiosInstance = axios.create({
 //       baseURL: "https://lakmestaging.myshopify.com/admin/api/2024-10",
 //       headers: {
-//         "X-Shopify-Access-Token": "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",
+//         "X-Shopify-Access-Token": shopify_token,
 //         "Content-Type": "application/json",
 //       },
 //     });
@@ -4614,7 +4614,7 @@ const updateOrderNoteHelper = async (orderId) => {
     const axiosInstance = axios.create({
       baseURL: "https://lakmestaging.myshopify.com/admin/api/2024-10",
       headers: {
-        "X-Shopify-Access-Token": "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",
+        "X-Shopify-Access-Token": shopify_token,
         "Content-Type": "application/json",
       },
     });
@@ -4721,7 +4721,7 @@ export const updateOrderNote = async (req, res) => {
     const axiosInstance = axios.create({
       baseURL: "https://lakmestaging.myshopify.com/admin/api/2024-10",
       headers: {
-        "X-Shopify-Access-Token": "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",
+        "X-Shopify-Access-Token": shopify_token,
         "Content-Type": "application/json",
       },
     });
@@ -4829,7 +4829,7 @@ export const updateOrderNote = async (req, res) => {
 //           maxBodyLength: Infinity,
 //           url: `https://lakmestaging.myshopify.com/admin/api/2024-01/products/${productId}.json`,
 //           headers: {
-//             "X-Shopify-Access-Token": "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",
+//             "X-Shopify-Access-Token": shopify_token,
 //           },
 //         };
 //         const response = await axios.request(config);
@@ -6474,7 +6474,7 @@ export const orderNoteUpdate = async (req, res) => {
       maxBodyLength: Infinity,
       url: `https://lakmestaging.myshopify.com/admin/api/2024-10/orders/${order_id}.json`,
       headers: {
-        "X-Shopify-Access-Token": "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",
+        "X-Shopify-Access-Token": shopify_token,
       },
     };
 
@@ -6494,7 +6494,7 @@ export const orderNoteUpdate = async (req, res) => {
       maxBodyLength: Infinity,
       url: `https://lakmestaging.myshopify.com/admin/api/2024-10/orders/${order_id}.json`,
       headers: {
-        "X-Shopify-Access-Token": "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",
+        "X-Shopify-Access-Token": shopify_token,
         "Content-Type": "application/json",
       },
       data: JSON.stringify({
@@ -8575,7 +8575,7 @@ export const sendNotificationsEarnedFun = async (
 //         url: `https://lakmestaging.myshopify.com/admin/api/2024-04/graphql.json`,
 //         method: "POST",
 //         headers: {
-//           "X-Shopify-Access-Token": "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",
+//           "X-Shopify-Access-Token": shopify_token,
 //           Accept: "application/json",
 //           "Content-Type": "application/json",
 //         },
