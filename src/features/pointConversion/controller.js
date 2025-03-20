@@ -2239,7 +2239,7 @@ export const pointCalculate = async (req, res) => {
           maxBodyLength: Infinity,
           url: `https://lakmestaging.myshopify.com/admin/api/2024-01/products/${productId}.json`,
           headers: {
-            "X-Shopify-Access-Token": config.shopify_token,
+            "X-Shopify-Access-Token": shopify_token,
           },
         };
         const response = await axios.request(configData);
@@ -2754,7 +2754,7 @@ const createMetafieldHelperFunction = async (customerId, metafieldsData) => {
       maxBodyLength: Infinity,
       url: "https://lakmestaging.myshopify.com/admin/api/2024-07/graphql.json",
       headers: {
-        "X-Shopify-Access-Token": config.shopify_token,
+        "X-Shopify-Access-Token": shopify_token,
         "Content-Type": "application/json",
       },
       data,
@@ -8664,7 +8664,7 @@ export const findOrderCustomer = async (req, res) => {
       maxBodyLength: Infinity,
       url: `https://lakmestaging.myshopify.com/admin/orders.json?customer_id=${customer_id}&status=any`,
       headers: {
-        "X-Shopify-Access-Token": config.shopify_token,
+        "X-Shopify-Access-Token": shopify_token,
       },
     };
 
@@ -11304,7 +11304,7 @@ export const getSubcriptionCheck = async (req, res) => {
       maxBodyLength: Infinity,
       url: "https://lakmestaging.myshopify.com/admin/api/2024-07/graphql.json",
       headers: {
-        "X-Shopify-Access-Token": config.shopify_token,
+        "X-Shopify-Access-Token": shopify_token,
         "Content-Type": "application/json",
         Cookie: "request_method=POST",
       },
