@@ -14,10 +14,9 @@ import userRoute from "./src/features/User/route.js";
 import staffRoute from "./src/features/Staff/route.js";
 import loginRoute from "./src/features/auth/route.js";
 import pointsRewardRoute from "./src/features/pointConversion/route.js";
-
+import lakmeRoute from "./src/features/lakme/route.js"
 import customerRoute from "./src/features/Customer/route.js";
 import tier_managementRoute from "./src/features/Member_Mangement/route.js";
-// import dsProduct from './src/features/dsProducts/route'
 
 import voucherRoute from "./src/features/voucher/route.js"
 import rptRoute from "./src/features/Rpt/route.js";
@@ -70,6 +69,7 @@ app.use("/api",layalityNotification)
 app.use("/pincode",pinCodeRoute);
 app.use("/script",scriptRoute)
 app.use("/rclub",rclubRoute)
+app.use("/lakme",lakmeRoute)
 
 
 // app.use("/shipping",shippingRoute)

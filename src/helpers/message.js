@@ -9,6 +9,7 @@ export const apiMessages = {
   unauthorized: "unauthorized",
   alreadyExist: "Already exists",
   required: "required",
+  login : "Login successfully"
 };
 
 
