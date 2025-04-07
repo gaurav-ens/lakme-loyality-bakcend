@@ -19,7 +19,7 @@ export const registerCustomerForLakme = async (req, res) => {
             otp
         } = req.body;
 
-        const access_token = config.shopify_token
+        const access_token = config.accessToken
         try {
             console.log("tru--", access_token);
 
@@ -92,7 +92,7 @@ export const registerCustomerForLakme = async (req, res) => {
 export const loginCustomerForLakme = async (req, res) => {
     try {
         const { phone_number, otp } = req.body
-        const access_token = config.shopify_token
+        const access_token = config.accessToken
 
         try {
             console.log("tru--", access_token);
@@ -120,7 +120,7 @@ export const loginCustomerForLakme = async (req, res) => {
 
 export const getAllProducts = async(req,res) => {
     try {
-        const access_token = config.shopify_token
+        const access_token = config.accessToken
         const query = `
         {
             products(first: 250, query:"status:active") {
