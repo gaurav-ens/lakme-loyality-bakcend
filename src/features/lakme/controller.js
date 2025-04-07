@@ -1,5 +1,6 @@
-import {  statusMaker, apiMessages, responseHandler } from "./index";
+import {  statusMaker, apiMessages, responseHandler,config } from "./index";
 import axios from 'axios'
+
 
 
 export const registerCustomerForLakme = async (req, res) => {
@@ -18,7 +19,7 @@ export const registerCustomerForLakme = async (req, res) => {
             otp
         } = req.body;
 
-        const access_token = "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"
+        const access_token = config.shopify_token
 
         try {
             console.log("tru--", access_token);
@@ -92,7 +93,8 @@ export const registerCustomerForLakme = async (req, res) => {
 export const loginCustomerForLakme = async (req, res) => {
     try {
         const { phone_number, otp } = req.body
-        const access_token = "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"
+        const access_token = config.shopify_token
+
         try {
             console.log("tru--", access_token);
 
@@ -119,7 +121,7 @@ export const loginCustomerForLakme = async (req, res) => {
 
 export const getAllProducts = async(req,res) => {
     try {
-        const token = "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"
+        const access_token = config.shopify_token
         const query = `
         {
             products(first: 250, query:"status:active") {
@@ -173,7 +175,7 @@ export const getAllProducts = async(req,res) => {
             url: `https://lakmestaging.myshopify.com/admin/api/2024-10/graphql.json`,
             method: 'POST',
             headers:{
-                 "X-Shopify-Access-Token": token,
+                 "X-Shopify-Access-Token": access_token,
         "Content-Type": "application/json"
             },
             data: JSON.stringify({ query }),

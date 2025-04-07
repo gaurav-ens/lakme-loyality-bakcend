@@ -13,6 +13,6 @@ export const config = {
     delivery_token        : process.env.DELHIVERY_TOKEN,
     shiprocket_token      : process.env.SHIPROCKET_TOKEN,
     shiproket_base_url    : process.env.SHIPROCKET_BASE_URL,
-    shopify_token    : process.env.shopify_token 
+    shopify_token    : process.env.SHOPIFY_TOKEN
 }
 
