@@ -20,7 +20,6 @@ export const registerCustomerForLakme = async (req, res) => {
         } = req.body;
 
         const access_token = config.shopify_token
-
         try {
             console.log("tru--", access_token);
 
